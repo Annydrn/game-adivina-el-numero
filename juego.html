@@ -1,0 +1,29 @@
+<h1>Adivina el numero</h1>
+
+<script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  const numeroIncognito = Math.round(Math.random() * 10); //aca al colocarle round hago que redondee el numero
+  // a uno entero no con decimales y el random es para que los numeros sean siempre al azar.
+  const numeroPensadoUsuario = parseInt(
+    prompt("Ingresa un numero entre 0 y 10")
+  );
+
+  if (numeroIncognito == numeroPensadoUsuario) {
+    imprimir("Haz acertado el numero incognito era " + numeroIncognito);
+  } else {
+    // else el "si no " si no se cumple la condicion que arroje este mensaje
+    imprimir("Te haz equivocado, el numero incognito era " + numeroIncognito);
+  }
+</script>
+<!-- actualizar el juego limitando las oportunidades para acertar 
+    y darle diseño con efectos 3d mas sonidos -->
